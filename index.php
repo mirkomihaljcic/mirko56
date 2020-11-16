@@ -5,7 +5,7 @@
 
 <style>
 input[type=text], select {
-  width: 50%;
+  width: 25%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -15,7 +15,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 50%;
+  width: 25%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -33,6 +33,10 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  position: absolute;
+        top: 50%;
+        left: 50%;      
+        transform: translate(-50%, -50%)
 }
 </style>
 
