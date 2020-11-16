@@ -25,9 +25,8 @@ if (isset($_GET['action']))
 if ($_GET['action'] == 'add')  
     {  
       
-    $insertSql = "INSERT INTO dbo.tabela (RB,IME,PREZIME) VALUES (?,?,?)";  
-    $params = array(&$_POST['t_RB'], &$_POST['t_IME'], &$_POST['t_PREZIME']]);  
-    $stmt = sqlsrv_query($conn, $insertSql, $params);  
+    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (1,'mirko','mihaljcic')";  
+    $stmt = sqlsrv_query($conn, $insertSql);  
  
        
     }  
