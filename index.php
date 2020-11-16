@@ -42,8 +42,11 @@ table {
   border-collapse: collapse;
   width: 50%;
 }
-td {
+tr {
   text-align: center;
+}
+td {
+  text-align: left;
 }
 </style>
 
