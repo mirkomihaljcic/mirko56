@@ -38,7 +38,7 @@ div {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 50%;
 }
 
 th, td {
