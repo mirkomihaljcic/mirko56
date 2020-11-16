@@ -35,16 +35,22 @@ div {
   padding: 20px;
 
 }
-table, td, th {
-  border: 1px solid black;
-}
+
 table {
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
 }
 
-td {
+th, td {
   text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
 
