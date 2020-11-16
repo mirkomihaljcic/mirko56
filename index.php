@@ -15,7 +15,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 70px;
+  width: 20%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -33,10 +33,11 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  text-align: center;    
-
-
+  
 }
+div.submitWrapper  {
+   text-align: center;    
+}    
 
 table {
   border-collapse: collapse;
