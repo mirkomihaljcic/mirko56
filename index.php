@@ -39,11 +39,13 @@ div {
 table {
   border-collapse: collapse;
   width: 100%;
+  border: 1px solid black;
 }
 
 th, td {
   text-align: left;
   padding: 8px;
+  border: 1px solid black;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
