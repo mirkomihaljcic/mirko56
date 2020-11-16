@@ -42,7 +42,7 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+td {
   text-align: left;
   padding: 8px;
   border: 1px solid black;
@@ -96,9 +96,9 @@ if(sqlsrv_has_rows($stmt))
 { 
 print("<table>"); 
 print("<tr>"); 
-print("<th>Redni Broj</th>"); 
-print("<th>Ime</th>"); 
-print("<th>Prezime</th>"); 
+print("<th>REDNI BROJ</th>"); 
+print("<th>IME</th>"); 
+print("<th>PREZIME</th>"); 
 print("</tr>");
  
 while($row = sqlsrv_fetch_array($stmt)) 
