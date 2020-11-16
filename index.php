@@ -15,12 +15,11 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 50%;
+  width: 70px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin:auto 0;
-  text-align: center;
+  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -34,6 +33,8 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  text-align: center;    
+
 
 }
 
@@ -69,7 +70,8 @@ th {
 <input type="text" name="t_ime" id="t_ime" placeholder="Ime"> </br>
 <label for="prezime">Prezime:</label></br>
 <input type="text" name="t_prezime" id="t_prezime" placeholder="Prezime"></br>
-<input type="submit" name="submit" value="Unesi" />  
+<div class='submitWrapper'> 
+<input type="submit" name="submit" value="Unesi" /></div> 
 </form> 
 </div> 
 <?php  
