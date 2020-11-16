@@ -34,7 +34,7 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
   position: absolute;
-        top: 50%;
+        top: 20%;
         left: 50%;      
         transform: translate(-50%, -50%)
 }
