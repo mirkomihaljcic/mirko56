@@ -25,7 +25,7 @@ if (isset($_GET['action']))
 if ($_GET['action'] == 'add')  
     {  
       
-    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (1,'mirko','mihaljcic')";  
+    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (2,'milan','mihaljcic')";  
     $stmt = sqlsrv_query($conn, $insertSql);  
  
        
