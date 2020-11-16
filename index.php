@@ -31,7 +31,7 @@ if ($_GET['action'] == 'add')
 }  
 /////////////////////////
 
-$sql = "SELECT * FROM tabela ORDER BY name"; 
+$sql = "SELECT * FROM tabela ORDER BY IME"; 
 $stmt = sqlsrv_query($conn, $sql); 
 if($stmt === false) 
 { 
