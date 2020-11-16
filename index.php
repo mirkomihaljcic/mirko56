@@ -1,5 +1,6 @@
 <html>
 <head>  
+<link rel="stylesheet" href="styles.css">
 <Title>Prakticni</Title>  
 </head>  
 <body>  
