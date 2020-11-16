@@ -40,11 +40,11 @@ div {
 <body>  
 <div>
 <form method="post" action="?action=add" > 
-<label for="rednibroj">Redni Broj:</label>
+<label for="rednibroj">Redni Broj:</label></br>
 <input type="text" name="t_rednib" id="t_rednib" placeholder="Redni Broj">
-<label for="ime">Ime:</label>
+<label for="ime">Ime:</label></br>
 <input type="text" name="t_ime" id="t_ime" placeholder="Ime"> 
-<label for="prezime">Prezime:</label>
+<label for="prezime">Prezime:</label></br>
 <input type="text" name="t_prezime" id="t_prezime" placeholder="Prezime">
 <input type="submit" name="submit" value="Unesi" />  
 </form> 
