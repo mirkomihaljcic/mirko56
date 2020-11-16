@@ -6,9 +6,9 @@
 </head>  
 <body>  
 <form method="post" action="?action=add" enctype="multipart/form-data" >  
-RB <input type="text" name="t_RB" id="t_RB"/></br>  
-IME <input type="text" name="t_IME" id="t_IME"/></br>  
-PREZIME <input type="text" name="t_PREZIME" id="t_PREZIME"/></br>  
+RB <input type="text" name="t_rednib" id="t_rednib"/></br>  
+IME <input type="text" name="t_ime" id="t_ime"/></br>  
+PREZIME <input type="text" name="t_prezime" id="t_prezime"/></br>  
 
 <input type="submit" name="submit" value="Submit" />  
 </form>  
@@ -25,8 +25,9 @@ if (isset($_GET['action']))
 if ($_GET['action'] == 'add')  
     {  
       
-    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (2,'milan','mihaljcic')";  
-    $stmt = sqlsrv_query($conn, $insertSql);  
+    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (?,?,?)";  
+    $params = array(&$_POST['t_rednib'], &$_POST['t_ime'], &$_POST['t_prezime']); 
+    $stmt = sqlsrv_query($conn, $insertSql, $params);  
  
        
     }  
