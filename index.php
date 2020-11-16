@@ -4,13 +4,17 @@
 <Title>Prakticni</Title>  
 </head>  
 <body>  
-<form method="post" action="?action=add" >  
-Redni Broj: <input type="text" name="t_rednib" id="t_rednib"/></br>  
-Ime: <input type="text" name="t_ime" id="t_ime"/></br>  
-Prezime: <input type="text" name="t_prezime" id="t_prezime"/></br>  
-
-<input type="submit" name="submit" value="Submit" />  
-</form>  
+<div>
+<form method="post" action="?action=add" > 
+<label for="rednibroj">Redni Broj:</label>
+<input type="text" name="t_rednib" id="t_rednib" placeholder="Redni Broj">
+<label for="ime">Ime:</label>
+<input type="text" name="t_ime" id="t_ime"placeholder="Ime"> 
+<label for="prezime">Prezime:</label>
+<input type="text" name="t_prezime" id="t_prezime"placeholder="Prezime">
+<input type="submit" name="submit" value="Unesi" />  
+</form> 
+</div> 
 <?php  
 
 $serverName = "tcp:servermirko56.database.windows.net,1433";  
