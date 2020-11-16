@@ -88,9 +88,9 @@ if(sqlsrv_has_rows($stmt))
 { 
 print("<table>"); 
 print("<tr>"); 
-print("<td>Redni Broj</td>"); 
-print("<td>Ime</td>"); 
-print("<td>Prezime</td>"); 
+print("<th>Redni Broj</th>"); 
+print("<th>Ime</th>"); 
+print("<th>Prezime</th>"); 
 print("</tr>");
  
 while($row = sqlsrv_fetch_array($stmt)) 
