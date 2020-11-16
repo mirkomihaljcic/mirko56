@@ -5,9 +5,9 @@
 </head>  
 <body>  
 <form method="post" action="?action=add" >  
-RB <input type="text" name="t_rednib" id="t_rednib"/></br>  
-IME <input type="text" name="t_ime" id="t_ime"/></br>  
-PREZIME <input type="text" name="t_prezime" id="t_prezime"/></br>  
+Redni Broj: <input type="text" name="t_rednib" id="t_rednib"/></br>  
+Ime: <input type="text" name="t_ime" id="t_ime"/></br>  
+Prezime: <input type="text" name="t_prezime" id="t_prezime"/></br>  
 
 <input type="submit" name="submit" value="Submit" />  
 </form>  
@@ -37,7 +37,6 @@ die(print_r(sqlsrv_errors(), true));
  
 if(sqlsrv_has_rows($stmt)) 
 { 
-print("<table border='1px'>"); 
 print("<tr><td>Redni Broj</td>"); 
 print("<td>Ime</td>"); 
 print("<td>Prezime</td>"); 
