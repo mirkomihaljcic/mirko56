@@ -15,11 +15,12 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 100%;
-  background-color: #000099;
+  width: 50%;
+  background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin:auto 0;
+  text-align: center;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -51,7 +52,7 @@ td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-  background-color: #000099;
+  background-color: #4CAF50;
   color: white;
   padding: 8px;
   border: 1px solid black;
