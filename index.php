@@ -9,11 +9,34 @@ $serverName = "tcp:servermirko55.database.windows.net,1433";
 $connectionOptions = array("Database" => "mirko55database","UID" => "mirkofuckazure","PWD" => "Mirko1234567*");  
 $conn = sqlsrv_connect($serverName, $connectionOptions); 
 
-
-
-
-	 
-	echo "New record created successfully !";
+if (isset($_GET['action']))  
+    {  
+    if ($_GET['action'] == 'add')  
+        {   
+        $insertSql = "INSERT INTO tabela (rb,ime,prezime) VALUES (?,?,?)";  
+        $params = array(&$_POST['t_rb'], &$_POST['t_ime'], &$_POST['t_prezime']);  
+        $stmt = sqlsrv_query($conn, $insertSql, $params);  
+        if ($stmt === false)  
+            {  
+            /*Handle the case of a duplicte e-mail address.*/  
+            $errors = sqlsrv_errors();  
+            if ($errors[0]['code'] == 2601)  
+                {  
+                echo "The e-mail address you entered has already been used.</br>";  
+                }  
+  
+            /*Die if other errors occurred.*/  
+              else  
+                {  
+                die(print_r($errors, true));  
+                }  
+            }  
+          else  
+            {  
+            echo "Registration complete.</br>";  
+            }  
+        }  
+    }
 
 
 
