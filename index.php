@@ -78,7 +78,7 @@ th {
 <?php  
 
 $serverName = "tcp:servermirko56.database.windows.net,1433";  
-$connectionOptions = array("Database" => "mirko56database","UID" => "mirkoazure","PWD" => "Mirko1234567*");  
+$connectionOptions = array("Database" => "mirko56database","UID" => "mirkoazure","PWD" => "XXXXXXXXXXX");  
 $conn = sqlsrv_connect($serverName, $connectionOptions);  
  
 if (isset($_GET['action']))  
