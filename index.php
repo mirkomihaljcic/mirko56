@@ -6,10 +6,10 @@
 </head>  
 <body>  
 <form method="post" action="?action=add" enctype="multipart/form-data" >  
-Emp Id <input type="text" name="t_emp_id" id="t_emp_id"/></br>  
-Name <input type="text" name="t_name" id="t_name"/></br>  
-Education <input type="text" name="t_education" id="t_education"/></br>  
-E-mail address <input type="text" name="t_email" id="t_email"/></br>  
+IME <input type="text" name="t_RB" id="t_RB"/></br>  
+Name <input type="text" name="t_IME" id="t_IME"/></br>  
+PREZIME <input type="text" name="t_PREZIME" id="t_PREZIME"/></br>  
+
 <input type="submit" name="submit" value="Submit" />  
 </form>  
 <?php  
@@ -29,9 +29,9 @@ if (isset($_GET['action']))
     if ($_GET['action'] == 'add')  
         {  
         /*Insert data.*/  
-        $insertSql = "INSERT INTO empTable (emp_id,name,education,email)   
-VALUES (?,?,?,?)";  
-        $params = array(&$_POST['t_emp_id'], &$_POST['t_name'], &$_POST['t_education'], &$_POST['t_email']  
+        $insertSql = "INSERT INTO tabela (RB,IME,PREZIME)   
+VALUES (?,?,?)";  
+        $params = array(&$_POST['t_RB'], &$_POST['t_IME'], &$_POST['t_PREZIME']]  
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
         if ($stmt === false)  
@@ -57,7 +57,7 @@ VALUES (?,?,?,?)";
     }  
   
 /*Display registered people.*/  
-$sql = "SELECT * FROM empTable ORDER BY name"; 
+$sql = "SELECT * FROM tabela ORDER BY name"; 
 $stmt = sqlsrv_query($conn, $sql); 
 if($stmt === false) 
 { 
@@ -67,18 +67,18 @@ die(print_r(sqlsrv_errors(), true));
 if(sqlsrv_has_rows($stmt)) 
 { 
 print("<table border='1px'>"); 
-print("<tr><td>Emp Id</td>"); 
-print("<td>Name</td>"); 
-print("<td>education</td>"); 
-print("<td>Email</td></tr>"); 
+print("<tr><td>RB</td>"); 
+print("<td>IME</td>"); 
+print("<td>PREZIME</td>"); 
+ 
  
 while($row = sqlsrv_fetch_array($stmt)) 
 { 
  
-print("<tr><td>".$row['emp_id']."</td>"); 
-print("<td>".$row['name']."</td>"); 
-print("<td>".$row['education']."</td>"); 
-print("<td>".$row['email']."</td></tr>"); 
+print("<tr><td>".$row['RB']."</td>"); 
+print("<td>".$row['IME']."</td>"); 
+print("<td>".$row['PREZIME']."</td>"); 
+
 } 
  
 print("</table>"); 
