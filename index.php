@@ -16,7 +16,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #000099;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -51,7 +51,7 @@ td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-  background-color: #4CAF50;
+  background-color: #000099;
   color: white;
   padding: 8px;
   border: 1px solid black;
