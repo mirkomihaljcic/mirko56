@@ -15,10 +15,48 @@ PREZIME <input type="text" name="t_PREZIME" id="t_PREZIME"/></br>
 <?php  
 
 
+
 $serverName = "tcp:servermirko56.database.windows.net,1433";  
 $connectionOptions = array("Database" => "mirko56database","UID" => "mirkoazure","PWD" => "Mirko1234567*");  
 $conn = sqlsrv_connect($serverName, $connectionOptions);  
-  
+if ($conn === false)  
+{  
+die(print_r(sqlsrv_errors() , true));  
+}  
+
+if (isset($_GET['action']))  
+{  
+if ($_GET['action'] == 'add')  
+    {  
+    /*Insert data.*/  
+    $insertSql = "INSERT INTO tabela (RB,IME,PREZIME)   
+VALUES (?,?,?)";  
+    $params = array(&$_POST['t_RB'], &$_POST['t_IME'], &$_POST['t_PREZIME']]  
+    );  
+    $stmt = sqlsrv_query($conn, $insertSql, $params);  
+    if ($stmt === false)  
+        {  
+        /*Handle the case of a duplicte e-mail address.*/  
+        $errors = sqlsrv_errors();  
+        if ($errors[0]['code'] == 2601)  
+            {  
+            echo "The e-mail address you entered has already been used.</br>";  
+            }  
+
+        /*Die if other errors occurred.*/  
+          else  
+            {  
+            die(print_r($errors, true));  
+            }  
+        }  
+      else  
+        {  
+        echo "Registration complete.</br>";  
+        }  
+    }  
+}  
+
+
 
 ?>  
 </body>  
