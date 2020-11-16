@@ -42,9 +42,7 @@ table {
   border-collapse: collapse;
   width: 50%;
 }
-tr {
-  text-align: center;
-}
+
 td {
   text-align: left;
 }
@@ -89,17 +87,19 @@ die(print_r(sqlsrv_errors(), true));
 if(sqlsrv_has_rows($stmt)) 
 { 
 print("<table>"); 
-print("<tr><td>Redni Broj</td>"); 
+print("<tr>"); 
+print("<td>Redni Broj</td>"); 
 print("<td>Ime</td>"); 
 print("<td>Prezime</td>"); 
- 
+print("</tr>");
  
 while($row = sqlsrv_fetch_array($stmt)) 
 { 
- 
-print("<tr><td>".$row['RB']."</td>"); 
+print("<tr>"); 
+print("<td>".$row['RB']."</td>"); 
 print("<td>".$row['IME']."</td>"); 
 print("<td>".$row['PREZIME']."</td>"); 
+print("</tr>");
 } 
  
 print("</table>"); 
