@@ -6,14 +6,14 @@ PREZIME <input type="text" name="t_prezime" id="t_prezime"/></br>
 <input type="submit" name="submit" value="Submit"/></form>  
 <?php      
 $serverName = "tcp:servermirko55.database.windows.net,1433";  
-$connectionOptions = array("Database" => "mirko55database","UID" => "mirkofuckazure","PWD" => "Mirko1234567*");  
+$connectionOptions = array("Database" => "mirko56database","UID" => "mirkoazure","PWD" => "Mirko1234567*");  
 $conn = sqlsrv_connect($serverName, $connectionOptions); 
 
 if (isset($_GET['action']))  
     {  
     if ($_GET['action'] == 'add')  
         {   
-        $insertSql = "INSERT INTO tabela (rb,ime,prezime) VALUES (?,?,?)";  
+        $insertSql = "INSERT INTO tabela (RB,IME,PREZIME) VALUES (?,?,?)";  
         $params = array(&$_POST['t_rb'], &$_POST['t_ime'], &$_POST['t_prezime']);  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
         if ($stmt === false)  
