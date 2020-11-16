@@ -33,10 +33,7 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  position: absolute;
-        top: 20%;
-        left: 50%;      
-        transform: translate(-50%, -50%)
+
 }
 </style>
 
