@@ -65,14 +65,14 @@ th {
 <body>  
 <div>
 <form method="post" action="?action=add" > 
-<label for="rednibroj">Redni Broj:</label></br>
+<label for="rednibroj">REDNI BROJ:</label></br>
 <input type="text" name="t_rednib" id="t_rednib" placeholder="Redni Broj"></br>
-<label for="ime">Ime:</label></br>
+<label for="ime">IME:</label></br>
 <input type="text" name="t_ime" id="t_ime" placeholder="Ime"> </br>
-<label for="prezime">Prezime:</label></br>
+<label for="prezime">PREZIME:</label></br>
 <input type="text" name="t_prezime" id="t_prezime" placeholder="Prezime"></br>
 <div class='submitWrapper'> 
-<input type="submit" name="submit" value="Unesi" /></div> 
+<input type="submit" name="submit" value="UNESI" /></div> 
 </form> 
 </div> 
 <?php  
