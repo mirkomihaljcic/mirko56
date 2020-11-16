@@ -37,6 +37,7 @@ die(print_r(sqlsrv_errors(), true));
  
 if(sqlsrv_has_rows($stmt)) 
 { 
+print("<table border='1px'>"); 
 print("<tr><td>Redni Broj</td>"); 
 print("<td>Ime</td>"); 
 print("<td>Prezime</td>"); 
